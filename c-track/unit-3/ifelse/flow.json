@@ -1,0 +1,92 @@
+{
+  "id": "84d36762-d2d6-4042-94ca-da93da628b02",
+  "name": "main",
+  "isEntry": true,
+  "nodes": [
+    {
+      "id": "start-3001",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "id": "node-3001-in",
+      "type": "input",
+      "label": "Read number",
+      "hasError": false,
+      "selectedResources": [
+        "res-3001-1"
+      ]
+    },
+    {
+      "id": "node-3001-dec",
+      "type": "decision",
+      "label": "Check even or odd",
+      "hasError": false,
+      "outcomes": [
+        {
+          "id": "outcome-3001-1",
+          "label": "num % 2 == 0",
+          "nodes": [
+            {
+              "id": "node-3001-out1",
+              "type": "output",
+              "label": "Even",
+              "hasError": false,
+              "description": "{num} is even",
+              "outputTemplate": "{num} is even"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "cond-3001-1",
+              "value": "0",
+              "operator": "equals",
+              "resource": "num % 2",
+              "resourceFullPath": "num % 2"
+            }
+          ]
+        },
+        {
+          "id": "outcome-3001-default",
+          "label": "Else",
+          "nodes": [
+            {
+              "id": "node-3001-out2",
+              "type": "output",
+              "label": "Odd",
+              "hasError": false,
+              "description": "{num} is odd",
+              "outputTemplate": "{num} is odd"
+            }
+          ],
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "id": "end-3001",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "resources": [
+    {
+      "id": "res-3001-1",
+      "name": "num",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    }
+  ],
+  "parameters": [],
+  "returnType": "void",
+  "history": [
+    "{\"nodes\":[{\"id\":\"start-3001\",\"type\":\"start\",\"label\":\"Start\"},{\"id\":\"node-3001-in\",\"type\":\"input\",\"label\":\"Read number\",\"hasError\":false,\"selectedResources\":[\"res-3001-1\"]},{\"id\":\"node-3001-dec\",\"type\":\"decision\",\"label\":\"Check even or odd\",\"hasError\":false,\"outcomes\":[{\"id\":\"outcome-3001-1\",\"label\":\"num % 2 == 0\",\"nodes\":[{\"id\":\"node-3001-out1\",\"type\":\"output\",\"label\":\"Even\",\"hasError\":false,\"description\":\"{num} is even\",\"outputTemplate\":\"{num} is even\"}],\"conditions\":[{\"id\":\"cond-3001-1\",\"value\":\"0\",\"operator\":\"equals\",\"resource\":\"num % 2\",\"resourceFullPath\":\"num % 2\"}]},{\"id\":\"outcome-3001-default\",\"label\":\"Else\",\"nodes\":[{\"id\":\"node-3001-out2\",\"type\":\"output\",\"label\":\"Odd\",\"hasError\":false,\"description\":\"{num} is odd\",\"outputTemplate\":\"{num} is odd\"}],\"isDefault\":true}]},{\"id\":\"end-3001\",\"type\":\"end\",\"label\":\"End\"}],\"resources\":[{\"id\":\"res-3001-1\",\"name\":\"num\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"}]}"
+  ],
+  "historyIndex": 0,
+  "skipHistoryPush": false,
+  "clipboard": null,
+  "clipboardAction": null,
+  "cutNodeId": null
+}
