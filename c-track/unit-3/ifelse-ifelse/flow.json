@@ -1,0 +1,138 @@
+{
+  "id": "f49bc690-5d46-42d6-9a07-e41d1ea7f4fa",
+  "name": "main",
+  "isEntry": true,
+  "nodes": [
+    {
+      "id": "start-3002",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "id": "node-3002-in",
+      "type": "input",
+      "label": "Read marks",
+      "hasError": false,
+      "selectedResources": [
+        "res-3002-1"
+      ]
+    },
+    {
+      "id": "node-3002-dec",
+      "type": "decision",
+      "label": "Assign grade",
+      "hasError": false,
+      "outcomes": [
+        {
+          "id": "outcome-3002-1",
+          "label": "marks >= 90",
+          "nodes": [
+            {
+              "id": "node-3002-out1",
+              "type": "output",
+              "label": "Grade A",
+              "hasError": false,
+              "description": "Grade: A",
+              "outputTemplate": "Grade: A"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "cond-3002-1",
+              "value": "90",
+              "operator": "greaterOrEqual",
+              "resource": "marks",
+              "resourceFullPath": "marks"
+            }
+          ]
+        },
+        {
+          "id": "outcome-3002-2",
+          "label": "marks >= 75",
+          "nodes": [
+            {
+              "id": "node-3002-out2",
+              "type": "output",
+              "label": "Grade B",
+              "hasError": false,
+              "description": "Grade: B",
+              "outputTemplate": "Grade: B"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "cond-3002-2",
+              "value": "75",
+              "operator": "greaterOrEqual",
+              "resource": "marks",
+              "resourceFullPath": "marks"
+            }
+          ]
+        },
+        {
+          "id": "outcome-3002-3",
+          "label": "marks >= 50",
+          "nodes": [
+            {
+              "id": "node-3002-out3",
+              "type": "output",
+              "label": "Grade C",
+              "hasError": false,
+              "description": "Grade: C",
+              "outputTemplate": "Grade: C"
+            }
+          ],
+          "conditions": [
+            {
+              "id": "cond-3002-3",
+              "value": "50",
+              "operator": "greaterOrEqual",
+              "resource": "marks",
+              "resourceFullPath": "marks"
+            }
+          ]
+        },
+        {
+          "id": "outcome-3002-default",
+          "label": "Else (Fail)",
+          "nodes": [
+            {
+              "id": "node-3002-out4",
+              "type": "output",
+              "label": "Fail",
+              "hasError": false,
+              "description": "Grade: F (Fail)",
+              "outputTemplate": "Grade: F (Fail)"
+            }
+          ],
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "id": "end-3002",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "resources": [
+    {
+      "id": "res-3002-1",
+      "name": "marks",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    }
+  ],
+  "parameters": [],
+  "returnType": "void",
+  "history": [
+    "{\"nodes\":[{\"id\":\"start-3002\",\"type\":\"start\",\"label\":\"Start\"},{\"id\":\"node-3002-in\",\"type\":\"input\",\"label\":\"Read marks\",\"hasError\":false,\"selectedResources\":[\"res-3002-1\"]},{\"id\":\"node-3002-dec\",\"type\":\"decision\",\"label\":\"Assign grade\",\"hasError\":false,\"outcomes\":[{\"id\":\"outcome-3002-1\",\"label\":\"marks >= 90\",\"nodes\":[{\"id\":\"node-3002-out1\",\"type\":\"output\",\"label\":\"Grade A\",\"hasError\":false,\"description\":\"Grade: A\",\"outputTemplate\":\"Grade: A\"}],\"conditions\":[{\"id\":\"cond-3002-1\",\"value\":\"90\",\"operator\":\"greaterOrEqual\",\"resource\":\"marks\",\"resourceFullPath\":\"marks\"}]},{\"id\":\"outcome-3002-2\",\"label\":\"marks >= 75\",\"nodes\":[{\"id\":\"node-3002-out2\",\"type\":\"output\",\"label\":\"Grade B\",\"hasError\":false,\"description\":\"Grade: B\",\"outputTemplate\":\"Grade: B\"}],\"conditions\":[{\"id\":\"cond-3002-2\",\"value\":\"75\",\"operator\":\"greaterOrEqual\",\"resource\":\"marks\",\"resourceFullPath\":\"marks\"}]},{\"id\":\"outcome-3002-3\",\"label\":\"marks >= 50\",\"nodes\":[{\"id\":\"node-3002-out3\",\"type\":\"output\",\"label\":\"Grade C\",\"hasError\":false,\"description\":\"Grade: C\",\"outputTemplate\":\"Grade: C\"}],\"conditions\":[{\"id\":\"cond-3002-3\",\"value\":\"50\",\"operator\":\"greaterOrEqual\",\"resource\":\"marks\",\"resourceFullPath\":\"marks\"}]},{\"id\":\"outcome-3002-default\",\"label\":\"Else (Fail)\",\"nodes\":[{\"id\":\"node-3002-out4\",\"type\":\"output\",\"label\":\"Fail\",\"hasError\":false,\"description\":\"Grade: F (Fail)\",\"outputTemplate\":\"Grade: F (Fail)\"}],\"isDefault\":true}]},{\"id\":\"end-3002\",\"type\":\"end\",\"label\":\"End\"}],\"resources\":[{\"id\":\"res-3002-1\",\"name\":\"marks\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"}]}"
+  ],
+  "historyIndex": 0,
+  "skipHistoryPush": false,
+  "clipboard": null,
+  "clipboardAction": null,
+  "cutNodeId": null
+}
