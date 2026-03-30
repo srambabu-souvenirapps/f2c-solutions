@@ -1,0 +1,164 @@
+{
+  "id": "ab7b9f6a-c0ba-4749-84c8-bec3ca8785af",
+  "name": "main",
+  "isEntry": true,
+  "nodes": [
+    {
+      "id": "start-1003",
+      "type": "start",
+      "label": "Start"
+    },
+    {
+      "id": "node-1003-assign1",
+      "type": "assignment",
+      "label": "Set a and b",
+      "hasError": false,
+      "assignments": [
+        {
+          "id": "asgn-1003-1",
+          "fullPath": "a",
+          "operator": "=",
+          "expression": "15",
+          "valueSource": "expression",
+          "targetVariable": "res-1003-1"
+        },
+        {
+          "id": "asgn-1003-2",
+          "fullPath": "b",
+          "operator": "=",
+          "expression": "4",
+          "valueSource": "expression",
+          "targetVariable": "res-1003-2"
+        }
+      ]
+    },
+    {
+      "id": "node-1003-assign2",
+      "type": "assignment",
+      "label": "Calculate results",
+      "hasError": false,
+      "assignments": [
+        {
+          "id": "asgn-1003-3",
+          "fullPath": "sum",
+          "operator": "=",
+          "expression": "a + b",
+          "valueSource": "expression",
+          "targetVariable": "res-1003-3"
+        },
+        {
+          "id": "asgn-1003-4",
+          "fullPath": "diff",
+          "operator": "=",
+          "expression": "a - b",
+          "valueSource": "expression",
+          "targetVariable": "res-1003-4"
+        },
+        {
+          "id": "asgn-1003-5",
+          "fullPath": "prod",
+          "operator": "=",
+          "expression": "a * b",
+          "valueSource": "expression",
+          "targetVariable": "res-1003-5"
+        },
+        {
+          "id": "asgn-1003-6",
+          "fullPath": "quot",
+          "operator": "=",
+          "expression": "a / b",
+          "valueSource": "expression",
+          "targetVariable": "res-1003-6"
+        },
+        {
+          "id": "asgn-1003-7",
+          "fullPath": "rem",
+          "operator": "=",
+          "expression": "a % b",
+          "valueSource": "expression",
+          "targetVariable": "res-1003-7"
+        }
+      ]
+    },
+    {
+      "id": "node-1003-out",
+      "type": "output",
+      "label": "Display results",
+      "hasError": false,
+      "outputTemplate": "Sum={sum}, Diff={diff}, Prod={prod}, Quot={quot}, Rem={rem}"
+    },
+    {
+      "id": "end-1003",
+      "type": "end",
+      "label": "End"
+    }
+  ],
+  "resources": [
+    {
+      "id": "res-1003-1",
+      "name": "a",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    },
+    {
+      "id": "res-1003-2",
+      "name": "b",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    },
+    {
+      "id": "res-1003-3",
+      "name": "sum",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    },
+    {
+      "id": "res-1003-4",
+      "name": "diff",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    },
+    {
+      "id": "res-1003-5",
+      "name": "prod",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    },
+    {
+      "id": "res-1003-6",
+      "name": "quot",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    },
+    {
+      "id": "res-1003-7",
+      "name": "rem",
+      "scope": "local",
+      "dataType": "int",
+      "initialValue": "",
+      "resourceType": "variable"
+    }
+  ],
+  "parameters": [],
+  "returnType": "void",
+  "history": [
+    "{\"nodes\":[{\"id\":\"start-1003\",\"type\":\"start\",\"label\":\"Start\"},{\"id\":\"node-1003-assign1\",\"type\":\"assignment\",\"label\":\"Set a and b\",\"hasError\":false,\"assignments\":[{\"id\":\"asgn-1003-1\",\"fullPath\":\"a\",\"operator\":\"=\",\"expression\":\"15\",\"valueSource\":\"expression\",\"targetVariable\":\"res-1003-1\"},{\"id\":\"asgn-1003-2\",\"fullPath\":\"b\",\"operator\":\"=\",\"expression\":\"4\",\"valueSource\":\"expression\",\"targetVariable\":\"res-1003-2\"}]},{\"id\":\"node-1003-assign2\",\"type\":\"assignment\",\"label\":\"Calculate results\",\"hasError\":false,\"assignments\":[{\"id\":\"asgn-1003-3\",\"fullPath\":\"sum\",\"operator\":\"=\",\"expression\":\"a + b\",\"valueSource\":\"expression\",\"targetVariable\":\"res-1003-3\"},{\"id\":\"asgn-1003-4\",\"fullPath\":\"diff\",\"operator\":\"=\",\"expression\":\"a - b\",\"valueSource\":\"expression\",\"targetVariable\":\"res-1003-4\"},{\"id\":\"asgn-1003-5\",\"fullPath\":\"prod\",\"operator\":\"=\",\"expression\":\"a * b\",\"valueSource\":\"expression\",\"targetVariable\":\"res-1003-5\"},{\"id\":\"asgn-1003-6\",\"fullPath\":\"quot\",\"operator\":\"=\",\"expression\":\"a / b\",\"valueSource\":\"expression\",\"targetVariable\":\"res-1003-6\"},{\"id\":\"asgn-1003-7\",\"fullPath\":\"rem\",\"operator\":\"=\",\"expression\":\"a % b\",\"valueSource\":\"expression\",\"targetVariable\":\"res-1003-7\"}]},{\"id\":\"node-1003-out\",\"type\":\"output\",\"label\":\"Display results\",\"hasError\":false,\"outputTemplate\":\"Sum={sum}, Diff={diff}, Prod={prod}, Quot={quot}, Rem={rem}\"},{\"id\":\"end-1003\",\"type\":\"end\",\"label\":\"End\"}],\"resources\":[{\"id\":\"res-1003-1\",\"name\":\"a\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"},{\"id\":\"res-1003-2\",\"name\":\"b\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"},{\"id\":\"res-1003-3\",\"name\":\"sum\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"},{\"id\":\"res-1003-4\",\"name\":\"diff\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"},{\"id\":\"res-1003-5\",\"name\":\"prod\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"},{\"id\":\"res-1003-6\",\"name\":\"quot\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"},{\"id\":\"res-1003-7\",\"name\":\"rem\",\"scope\":\"local\",\"dataType\":\"int\",\"initialValue\":\"\",\"resourceType\":\"variable\"}]}"
+  ],
+  "historyIndex": 0,
+  "skipHistoryPush": false,
+  "clipboard": null,
+  "clipboardAction": null,
+  "cutNodeId": null
+}
